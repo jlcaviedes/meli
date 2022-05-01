@@ -1,5 +1,6 @@
 export interface ControllerViewInterface {
-    start(): Promise<string>
-    searchProducts(search: string): Promise<string>
-    detailProductById(id: string): Promise<string>
+  startView(): Promise<string>;
+  searchProductsView(search: string): Promise<string>;
+  detailProductView(id: string): Promise<string>;
+  notFound404View(): Promise<string>;
 }
