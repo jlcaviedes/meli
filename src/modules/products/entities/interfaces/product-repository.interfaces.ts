@@ -1,4 +1,5 @@
 export interface ProductRepositoryInterface {
-    searchProducts(search: string): any
-    detailProductById(id: string): any
+    searchProducts(search: string): Promise<any>
+    categoriesById(categoriesId: string): Promise<any>
+    detailProductById(id: string): Promise<any>
 }
