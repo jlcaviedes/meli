@@ -1,6 +1,6 @@
 export interface ProductViewInterface {
-    start(): Promise<string>
-    searchProducts(data: any): Promise<string>
-    detailProductById(data: any): Promise<string>
-    notFound404(): Promise<string>
+  startView(): Promise<string>;
+  searchProductsView(data: any): Promise<string>;
+  detailProductView(data: any): Promise<string>;
+  notFound404View(): Promise<string>;
 }

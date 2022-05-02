@@ -20,9 +20,9 @@ export class ProductController
     let viewHtml = "";
     try {
       const data = await this.searchProducts(search);
-      viewHtml = await this._view.searchProducts({ ...data, search });
+      viewHtml = await this._view.searchProductsView({ ...data, search });
     } catch (error) {
-      viewHtml = await this._view.notFound404();
+      viewHtml = await this._view.notFound404View();
     }
     return viewHtml;
   }
@@ -31,19 +31,19 @@ export class ProductController
 
     try {
       const data = await this.detailProductById(id);
-      viewHtml = await this._view.detailProductById({ ...data });
+      viewHtml = await this._view.detailProductView({ ...data });
     } catch (error) {
-      viewHtml = await this._view.notFound404();
+      viewHtml = await this._view.notFound404View();
     }
 
     return viewHtml;
   }
   async notFound404View(): Promise<string> {
-    return await this._view.notFound404();
+    return await this._view.notFound404View();
   }
 
   async startView(): Promise<string> {
-    return await this._view.start();
+    return await this._view.startView();
   }
 
   async searchProducts(search: string): Promise<any> {

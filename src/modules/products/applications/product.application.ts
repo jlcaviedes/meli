@@ -14,7 +14,6 @@ export class ProductApplication implements ProductApplicationInterface {
 
   async searchProducts(search: string) {
     const items = await this._repository.searchProducts(search);
-
     let ranking = this.rankingCategory(items);
 
     const categories = await this._repository.categoriesById(ranking.value);

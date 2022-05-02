@@ -10,6 +10,7 @@ export class ProductApiRepository implements ProductRepositoryInterface {
     const categories = resutlCategory.data?.path_from_root || [];
     return categories.map((category: any) => category.name);
   }
+
   async searchProducts(search: string): Promise<any> {
     const _search = convertNormalizedText(search);
     const resutls = (await axios.get(
@@ -19,6 +20,7 @@ export class ProductApiRepository implements ProductRepositoryInterface {
 
     return items.slice(0, 4).map(itemApiToItemMap);
   }
+
   async detailProductById(id: string): Promise<any> {
     const resutls = (await axios.get(
       `https://api.mercadolibre.com/items/${id}`
