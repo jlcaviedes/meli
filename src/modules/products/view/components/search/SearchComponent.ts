@@ -10,7 +10,9 @@ export function searchComponent(search: string) {
     template: `
         <div class="box-search">
         <form action="/items?" method="get" role="search" class="wraper box-search_form">
-          <img src="/assets/imgs/logo__large_plus.png" alt="logo" class="box-search_logo" />
+          <a href="/" >
+            <img src="/assets/imgs/logo__large_plus.png" alt="logo" class="box-search_logo" />
+          </a>
           <div class="box-search_container">
             <input class="box-search_input"
               data-test='input-search'
