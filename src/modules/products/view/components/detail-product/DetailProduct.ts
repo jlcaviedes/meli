@@ -20,9 +20,9 @@ export function detailProduct(item: any) {
             </div>
             <div class="detail-item_column2">
                 <span>{{data.condition === "new"? "Nuevo":"Usado"}}</span> 
-                <h2>{{data.title}}</h2>            
+                <h2 data-test="title">{{data.title}}</h2>            
                 <div class="detail-item_price">
-                    <h1> {{ currency(data.price.currency) }} 
+                    <h1 data-test="currency"> {{ currency(data.price.currency) }} 
                         <h2 class="detail-item_decimal"> {{ String(data.price.decimals||0).padEnd(2,'0') }} </h2>
                     </h1>                   
                 </div>
