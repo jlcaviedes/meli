@@ -8,5 +8,5 @@ export async function notFoundView() {
                 <button class="not-found_reset">Volver Home</button>
             </form>
         </div>
-    `)
+    `);
 }

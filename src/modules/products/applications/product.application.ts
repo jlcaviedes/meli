@@ -14,7 +14,7 @@ export class ProductApplication implements ProductApplicationInterface {
 
   async searchProducts(search: string) {
     const items = await this._repository.searchProducts(search);
-    let ranking = this.rankingCategory(items);
+    const ranking = this.rankingCategory(items);
 
     const categories = await this._repository.categoriesById(ranking.value);
     return {
@@ -39,8 +39,9 @@ export class ProductApplication implements ProductApplicationInterface {
 
     let ranking = { value: "", count: 0 };
     Object.keys(rankingCategory).forEach((key) => {
-      rankingCategory[key] > ranking.count &&
-        (ranking = { value: key, count: rankingCategory[key] });
+      if (rankingCategory[key] > ranking.count) {
+          ranking = { value: key, count: rankingCategory[key] };
+        }
     });
     return ranking;
   }

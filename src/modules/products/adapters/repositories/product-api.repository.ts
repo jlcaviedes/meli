@@ -1,8 +1,15 @@
 import axios from "axios";
-import { itemApiToItemMap } from "../../entities/mappings/item-api-to-item-map";
 import { convertNormalizedText } from "../../../../utils/format";
 import { ProductRepositoryInterface } from "../../entities/interfaces";
+import { itemApiToItemMap } from "../mappings/item-api-to-item-map";
+
 export class ProductApiRepository implements ProductRepositoryInterface {
+  private MAX_PRODUCTS: number;
+
+  constructor() {
+    this.MAX_PRODUCTS = 4;
+  }
+
   async categoriesById(categoriesId: string): Promise<string> {
     const resutlCategory = (await axios.get(
       `https://api.mercadolibre.com/categories/${categoriesId}`
@@ -18,7 +25,7 @@ export class ProductApiRepository implements ProductRepositoryInterface {
     )) as any;
     const items = resutls.data?.results || [];
 
-    return items.slice(0, 4).map(itemApiToItemMap);
+    return items.slice(0, this.MAX_PRODUCTS).map(itemApiToItemMap);
   }
 
   async detailProductById(id: string): Promise<any> {

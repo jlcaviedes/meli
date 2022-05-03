@@ -1,0 +1,6 @@
+.eslintrc.js
+esbuild.js
+tsconfig.*.json
+dist/
+**/__tests__/**/*.*
+!src/

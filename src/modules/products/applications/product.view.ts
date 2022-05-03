@@ -9,10 +9,12 @@ export class ProductVueView implements ProductViewInterface {
     const html = searchEmptyView();
     return html;
   }
+
   async searchProductsView(data: any): Promise<string> {
     const html = resultView(data);
     return html;
   }
+
   async detailProductView(data: any): Promise<string> {
     const html = detailView(data);
     return html;

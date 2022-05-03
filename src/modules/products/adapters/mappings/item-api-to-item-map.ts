@@ -1,4 +1,4 @@
-import { Item, ItemApi } from "../types";
+import { Item, ItemApi } from "../../entities/types";
 
 export function itemApiToItemMap(itemApi: ItemApi): Item {
   const price = (itemApi.prices || [{}])[0] || {};
