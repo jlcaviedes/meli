@@ -13,9 +13,10 @@ export function searchComponent(search: string) {
           <img src="/assets/imgs/logo__large_plus.png" alt="logo" class="box-search_logo" />
           <div class="box-search_container">
             <input class="box-search_input"
+              data-test='input-search'
               :value="value"
               type="search" name="search" placeholder="Nunca dejes de buscar" />
-            <button class="box-search_glass_searh" type='submit'>
+            <button class="box-search_glass_searh" type='submit' data-test='button-search' >
               <div class="box-search_glass">
               </div>
               search

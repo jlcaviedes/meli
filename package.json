@@ -11,7 +11,8 @@
     "lint:fix": "eslint --cache --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:ext": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "tsc -p tsconfig.json && npm run copy && node esbuild.js",
-    "build:start": "node ./build/index.min.js"
+    "build:start": "node ./build/index.min.js",
+    "e2e": "cypress open"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "@typescript-eslint/parser": "^5.18.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^28.0.3",
+    "cypress": "^9.6.0",
     "esbuild": "^0.14.38",
     "eslint": "^8.13.0",
     "eslint-config-airbnb": "^19.0.4",
