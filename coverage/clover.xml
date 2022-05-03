@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1651469489067" clover="3.2.0">
-  <project timestamp="1651469489067" name="All files">
-    <metrics statements="131" coveredstatements="89" conditionals="29" coveredconditionals="14" methods="48" coveredmethods="36" elements="208" coveredelements="139" complexity="0" loc="131" ncloc="131" packages="22" files="33" classes="33"/>
+<coverage generated="1651553504032" clover="3.2.0">
+  <project timestamp="1651553504032" name="All files">
+    <metrics statements="139" coveredstatements="93" conditionals="29" coveredconditionals="13" methods="49" coveredmethods="37" elements="217" coveredelements="143" complexity="0" loc="139" ncloc="139" packages="22" files="33" classes="33"/>
     <package name="src">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="D:\git\meli\src\index.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.core">
-      <metrics statements="6" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <metrics statements="8" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <file name="app.ts" path="D:\git\meli\src\core\app.ts">
-        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\git\meli\src\core\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -34,46 +36,59 @@
       </file>
     </package>
     <package name="src.modules.products.adapters.controllers">
-      <metrics statements="18" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
+      <metrics statements="22" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
       <file name="products.ctrl.ts" path="D:\git\meli\src\modules\products\adapters\controllers\products.ctrl.ts">
-        <metrics statements="18" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+        <metrics statements="22" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
         <line num="46" count="1" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.modules.products.adapters.mappings">
+      <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+      <file name="item-api-to-item-map.ts" path="D:\git\meli\src\modules\products\adapters\mappings\item-api-to-item-map.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="4" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.modules.products.adapters.repositories">
-      <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="4"/>
+      <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="3" methods="5" coveredmethods="5"/>
       <file name="product-api.repository.ts" path="D:\git\meli\src\modules\products\adapters\repositories\product-api.repository.ts">
-        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="4"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="3" methods="5" coveredmethods="5"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="32" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="33" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.modules.products.adapters.services">
@@ -105,12 +120,12 @@
       </file>
     </package>
     <package name="src.modules.products.applications">
-      <metrics statements="23" coveredstatements="23" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10"/>
+      <metrics statements="24" coveredstatements="24" conditionals="4" coveredconditionals="3" methods="10" coveredmethods="10"/>
       <file name="index.ts" path="D:\git\meli\src\modules\products\applications\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="product.application.ts" path="D:\git\meli\src\modules\products\applications\product.application.ts">
-        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="6"/>
         <line num="12" count="4" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
@@ -125,18 +140,19 @@
         <line num="37" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="40" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="42" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
       </file>
       <file name="product.view.ts" path="D:\git\meli\src\modules\products\applications\product.view.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.modules.products.entities.interfaces">
@@ -153,19 +169,11 @@
       <file name="product-application.interface.ts" path="D:\git\meli\src\modules\products\entities\interfaces\product-application.interface.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="product-repository.interfaces.ts" path="D:\git\meli\src\modules\products\entities\interfaces\product-repository.interfaces.ts">
+      <file name="product-repository.interface.ts" path="D:\git\meli\src\modules\products\entities\interfaces\product-repository.interface.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="product-view.interface.ts" path="D:\git\meli\src\modules\products\entities\interfaces\product-view.interface.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-    </package>
-    <package name="src.modules.products.entities.mappings">
-      <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
-      <file name="item-api-to-item-map.ts" path="D:\git\meli\src\modules\products\entities\mappings\item-api-to-item-map.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
-        <line num="4" count="6" type="cond" truecount="4" falsecount="0"/>
-        <line num="5" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.modules.products.entities.types">
@@ -197,7 +205,7 @@
       <file name="Breadcrumb.ts" path="D:\git\meli\src\modules\products\view\components\breadcrumb\Breadcrumb.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.modules.products.view.components.detail-product">
@@ -206,7 +214,7 @@
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="5" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.modules.products.view.components.list-products">
@@ -215,7 +223,7 @@
         <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="5" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.modules.products.view.components.search">
@@ -268,7 +276,7 @@
     </package>
     <package name="src.modules.products.view.search-empty">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="search-Empty.view.ts" path="D:\git\meli\src\modules\products\view\search-empty\search-Empty.view.ts">
+      <file name="search-empty.view.ts" path="D:\git\meli\src\modules\products\view\search-empty\search-empty.view.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
