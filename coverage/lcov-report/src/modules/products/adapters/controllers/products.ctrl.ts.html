@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">27.27% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/18</span>
+                <span class='fraction'>6/22</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">27.27% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/18</span>
+                <span class='fraction'>6/22</span>
             </div>
         
             
@@ -119,11 +119,9 @@
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,88 +146,96 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ProductApplication, ProductVueView } from "../../applications";
-import {
-  ControllerApiInterface,
-  ControllerViewInterface,
-} from "../../entities/interfaces";
-import { ProductApiRepository } from "../repositories/product-api.repository";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ProductApplication, ProductVueView } from '../../applications';
+import { ControllerApiInterface, ControllerViewInterface } from '../../entities/interfaces';
+import { ProductApiRepository } from '../repositories/product-api.repository';
 &nbsp;
-export class ProductController
-  implements ControllerViewInterface, ControllerApiInterface
-{
-  private _app: ProductApplication;
-  private _view: ProductVueView;
+export class ProductController implements ControllerViewInterface, ControllerApiInterface {
+	private _app: ProductApplication;
 &nbsp;
-  constructor() {
-    this._app = new ProductApplication(new ProductApiRepository());
-    this._view = new ProductVueView();
-  }
+	private _view: ProductVueView;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  as</span>ync searchProductsView(search: string): Promise&lt;string&gt; {
-    let viewHtml = <span class="cstat-no" title="statement not covered" >"";</span>
-<span class="cstat-no" title="statement not covered" >    try {</span>
-      const data = <span class="cstat-no" title="statement not covered" >await this.searchProducts(search);</span>
-<span class="cstat-no" title="statement not covered" >      viewHtml = await this._view.searchProductsView({ ...data, search });</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      viewHtml = await this._view.notFound404View();</span>
-    }
-<span class="cstat-no" title="statement not covered" >    return viewHtml;</span>
-  }
-<span class="fstat-no" title="function not covered" >  as</span>ync detailProductView(id: string): Promise&lt;string&gt; {
-    let viewHtml = <span class="cstat-no" title="statement not covered" >"";</span>
+	constructor() {
+		this._app = new ProductApplication(new ProductApiRepository());
+		this._view = new ProductVueView();
+	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    try {</span>
-      const data = <span class="cstat-no" title="statement not covered" >await this.detailProductById(id);</span>
-<span class="cstat-no" title="statement not covered" >      viewHtml = await this._view.detailProductView({ ...data });</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      viewHtml = await this._view.notFound404View();</span>
-    }
+<span class="fstat-no" title="function not covered" >	as</span>ync searchProductsView(search: string): Promise&lt;string&gt; {
+		let viewHtml = <span class="cstat-no" title="statement not covered" >'';</span>
+<span class="cstat-no" title="statement not covered" >		try {</span>
+			const data = <span class="cstat-no" title="statement not covered" >await this.searchProducts(search);</span>
+<span class="cstat-no" title="statement not covered" >			viewHtml = await this._view.searchProductsView({ ...data, search });</span>
+		} catch (error) {
+<span class="cstat-no" title="statement not covered" >			viewHtml = await this._view.notFound404View();</span>
+		}
+<span class="cstat-no" title="statement not covered" >		return viewHtml;</span>
+	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return viewHtml;</span>
-  }
-  async notFound404View(): Promise&lt;string&gt; {
-    return await this._view.notFound404View();
-  }
+<span class="fstat-no" title="function not covered" >	as</span>ync detailProductView(id: string): Promise&lt;string&gt; {
+		let viewHtml = <span class="cstat-no" title="statement not covered" >'';</span>
 &nbsp;
-  async startView(): Promise&lt;string&gt; {
-    return await this._view.startView();
-  }
+<span class="cstat-no" title="statement not covered" >		try {</span>
+			const data = <span class="cstat-no" title="statement not covered" >await this.detailProductById(id);</span>
+<span class="cstat-no" title="statement not covered" >			viewHtml = await this._view.detailProductView({ ...data });</span>
+		} catch (error) {
+<span class="cstat-no" title="statement not covered" >			viewHtml = await this._view.notFound404View();</span>
+		}
 &nbsp;
-<span class="fstat-no" title="function not covered" >  as</span>ync searchProducts(search: string): Promise&lt;any&gt; {
-<span class="cstat-no" title="statement not covered" >    return await this._app.searchProducts(search);</span>
-  }
+<span class="cstat-no" title="statement not covered" >		return viewHtml;</span>
+	}
 &nbsp;
-<span class="fstat-no" title="function not covered" >  as</span>ync detailProductById(id: string): Promise&lt;any&gt; {
-<span class="cstat-no" title="statement not covered" >    return await this._app.detailProductById(id);</span>
-  }
+	async notFound404View(): Promise&lt;string&gt; {
+		const result = await this._view.notFound404View();
+		return result;
+	}
+&nbsp;
+	async startView(): Promise&lt;string&gt; {
+    const result = await this._view.startView();
+		return result;
+	}
+&nbsp;
+<span class="fstat-no" title="function not covered" >	as</span>ync searchProducts(search: string): Promise&lt;any&gt; {
+		const result = <span class="cstat-no" title="statement not covered" >await this._app.searchProducts(search);</span>
+<span class="cstat-no" title="statement not covered" >		return result;</span>
+	}
+&nbsp;
+<span class="fstat-no" title="function not covered" >	as</span>ync detailProductById(id: string): Promise&lt;any&gt; {
+		const result = <span class="cstat-no" title="statement not covered" >await this._app.detailProductById(id);</span>
+<span class="cstat-no" title="statement not covered" >		return result;</span>
+	}
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -238,7 +244,7 @@ export class ProductController
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 02 2022 00:31:28 GMT-0500 (hora estándar de Colombia)
+                at Mon May 02 2022 23:51:43 GMT-0500 (hora estándar de Colombia)
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>
