@@ -1,5 +1,4 @@
 import * as app from "./core/app";
-import "./modules/products"
+import "./modules/products";
 
-
-app.startService()
+app.startService();

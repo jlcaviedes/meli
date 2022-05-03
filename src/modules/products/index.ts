@@ -1,1 +1,1 @@
-import './adapters/services/product.service'
+import './adapters/services/product.service';

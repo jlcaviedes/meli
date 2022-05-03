@@ -1,16 +1,14 @@
-import { createSSRApp } from "vue"
-import { formatCurrecy } from "../../../../../utils/format"
+import { createSSRApp } from "vue";
+import { formatCurrecy } from "../../../../../utils/format";
 
 export function listProducts(items: any[] = []) {
   return createSSRApp({
     methods: {
       currency(value: string) {
-        return formatCurrecy(Number(value))
+        return formatCurrecy(Number(value));
       }
     },
-    data: () => {
-      return { items }
-    },
+    data: () => ({ items }),
     template: `
     <div class="list-items">
       <div v-for="item in items" :key="item.id" >
@@ -25,6 +23,5 @@ export function listProducts(items: any[] = []) {
       </div>
     </div>
     `
-  })
+  });
 }
-

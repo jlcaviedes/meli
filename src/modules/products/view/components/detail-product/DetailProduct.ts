@@ -1,16 +1,14 @@
-import { createSSRApp } from "vue"
-import { formatCurrecy } from "../../../../../utils/format"
+import { createSSRApp } from "vue";
+import { formatCurrecy } from "../../../../../utils/format";
 
 export function detailProduct(item: any) {
     return createSSRApp({
         methods: {
             currency(value: string) {
-                return formatCurrecy(Number(value))
+                return formatCurrecy(Number(value));
             }
         },
-        data: () => {
-            return { data: item }
-        },
+        data: () => ({ data: item }),
         template: `
         <div class="detail-item">
             <div class="detail-item_column1">
@@ -32,6 +30,5 @@ export function detailProduct(item: any) {
             </div>
         </div>
       `
-    })
+    });
 }
-

@@ -23,5 +23,5 @@ export async function containerView(body: string) {
           </div>
         </body>
       </html>
-      `
+      `;
 }

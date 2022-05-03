@@ -1,56 +1,58 @@
-import { ProductApplication, ProductVueView } from "../../applications";
-import {
-  ControllerApiInterface,
-  ControllerViewInterface,
-} from "../../entities/interfaces";
-import { ProductApiRepository } from "../repositories/product-api.repository";
+import { ProductApplication, ProductVueView } from '../../applications';
+import { ControllerApiInterface, ControllerViewInterface } from '../../entities/interfaces';
+import { ProductApiRepository } from '../repositories/product-api.repository';
 
-export class ProductController
-  implements ControllerViewInterface, ControllerApiInterface
-{
-  private _app: ProductApplication;
-  private _view: ProductVueView;
+export class ProductController implements ControllerViewInterface, ControllerApiInterface {
+	private _app: ProductApplication;
 
-  constructor() {
-    this._app = new ProductApplication(new ProductApiRepository());
-    this._view = new ProductVueView();
-  }
+	private _view: ProductVueView;
 
-  async searchProductsView(search: string): Promise<string> {
-    let viewHtml = "";
-    try {
-      const data = await this.searchProducts(search);
-      viewHtml = await this._view.searchProductsView({ ...data, search });
-    } catch (error) {
-      viewHtml = await this._view.notFound404View();
-    }
-    return viewHtml;
-  }
-  async detailProductView(id: string): Promise<string> {
-    let viewHtml = "";
+	constructor() {
+		this._app = new ProductApplication(new ProductApiRepository());
+		this._view = new ProductVueView();
+	}
 
-    try {
-      const data = await this.detailProductById(id);
-      viewHtml = await this._view.detailProductView({ ...data });
-    } catch (error) {
-      viewHtml = await this._view.notFound404View();
-    }
+	async searchProductsView(search: string): Promise<string> {
+		let viewHtml = '';
+		try {
+			const data = await this.searchProducts(search);
+			viewHtml = await this._view.searchProductsView({ ...data, search });
+		} catch (error) {
+			viewHtml = await this._view.notFound404View();
+		}
+		return viewHtml;
+	}
 
-    return viewHtml;
-  }
-  async notFound404View(): Promise<string> {
-    return await this._view.notFound404View();
-  }
+	async detailProductView(id: string): Promise<string> {
+		let viewHtml = '';
 
-  async startView(): Promise<string> {
-    return await this._view.startView();
-  }
+		try {
+			const data = await this.detailProductById(id);
+			viewHtml = await this._view.detailProductView({ ...data });
+		} catch (error) {
+			viewHtml = await this._view.notFound404View();
+		}
 
-  async searchProducts(search: string): Promise<any> {
-    return await this._app.searchProducts(search);
-  }
+		return viewHtml;
+	}
 
-  async detailProductById(id: string): Promise<any> {
-    return await this._app.detailProductById(id);
-  }
+	async notFound404View(): Promise<string> {
+		const result = await this._view.notFound404View();
+		return result;
+	}
+
+	async startView(): Promise<string> {
+    const result = await this._view.startView();
+		return result;
+	}
+
+	async searchProducts(search: string): Promise<any> {
+		const result = await this._app.searchProducts(search);
+		return result;
+	}
+
+	async detailProductById(id: string): Promise<any> {
+		const result = await this._app.detailProductById(id);
+		return result;
+	}
 }
