@@ -1,0 +1,52 @@
+{
+  "name": "meli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.js",
+    "copy": "rm -fr dist/assets && cp -r src/assets dist/assets",
+    "start": "tsc -p tsconfig.json && npm run copy && node ./dist/index.js",
+    "lint": "eslint --cache src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "eslint --cache --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:ext": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "build": "tsc -p tsconfig.json && npm run copy && node esbuild.js",
+    "build:start": "node ./build/index.min.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^28.0.3",
+    "esbuild": "^0.14.38",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.0",
+    "vue": "^3.2.33"
+  }
+}
